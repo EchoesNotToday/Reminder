@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
@@ -32,8 +33,32 @@ class LoginController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
+    public function __construct(){
         $this->middleware('guest')->except('logout');
+    }
+    
+    
+    public function username(){
+        return 'name';
+    }
+    public function getName(){
+        return 'email';
+    }
+
+
+    /**
+     * Get the needed authorization credentials from the request.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return array
+     */
+
+    protected function credentials(Request $request){
+        $credentials = $request->only($this->username(), 'password');
+        if(strpos($credentials[$this->username()], '@')>0){
+            $credentials[$this->getName()] = $credentials[$this->username()];
+            unset($credentials[$this->username()]);
+        }
+        return $credentials;
     }
 }
