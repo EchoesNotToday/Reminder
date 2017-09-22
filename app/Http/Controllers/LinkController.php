@@ -12,6 +12,12 @@ class LinkController extends Controller
     public function home(){
         return view('home');
     }
+    public function postit(){
+        $postit = \App\PostIt::findOrFail(1);
+        return view('postit', [
+            'postits' => [$postit]
+        ]);
+    }
     
     
     

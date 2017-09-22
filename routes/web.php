@@ -15,6 +15,7 @@
 Auth::routes();
 
 Route::get('/', 'LinkController@index');
+Route::get('/postit', 'LinkController@postit');
 
 Route::get('/home', [
     'middleware' => 'auth',
