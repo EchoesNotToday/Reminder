@@ -41,7 +41,7 @@ class LoginController extends Controller
     public function username(){
         return 'name';
     }
-    public function getName(){
+    public function getMail(){
         return 'email';
     }
 
@@ -56,7 +56,7 @@ class LoginController extends Controller
     protected function credentials(Request $request){
         $credentials = $request->only($this->username(), 'password');
         if(strpos($credentials[$this->username()], '@')>0){
-            $credentials[$this->getName()] = $credentials[$this->username()];
+            $credentials[$this->getMail()] = $credentials[$this->username()];
             unset($credentials[$this->username()]);
         }
         return $credentials;

@@ -11,10 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'LinkController@index');
+
+Route::get('/home', [
+    'middleware' => 'auth',
+    'uses' => 'LinkController@home'
+])->name('home');
