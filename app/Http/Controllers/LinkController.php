@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use \App\PostIt;
+use Illuminate\Support\Facades\Auth;
 
 class LinkController extends Controller
 {
@@ -14,8 +15,8 @@ class LinkController extends Controller
         return view('home');
     }
     public function postit(){
-        $postit = PostIt::where("user_id", "=", "1")->get();
-        \Log::info($postit);
+        $id = Auth::user()->id;
+        $postit = PostIt::where("user_id", "=", "$id")->get();
         return view('postit', [
             'datas' => [$postit]
         ]);
