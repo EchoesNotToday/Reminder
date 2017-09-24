@@ -6,19 +6,21 @@
                 <div class="panel-heading">Afficher les post It</div>
 
                 <div class="panel-body">
-                    @if (count($postits) > 0)
+                    @if (count($datas) > 0)
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             Current postits
                         </div>
 
                         <div class="panel-body">
-                            @foreach ($postits as $postit)
-                            <div>
-                                <h1>{{ $postit->titre }}</h1>
-                                <p>{{ $postit->contenu }}</p>
-                            </div>
-                            @endforeach
+                            @for ($i = 0; $i < count($datas); $i++)
+                                @foreach ($datas[$i] as $postit)
+                                    <div>
+                                        <h1>{{ $postit->titre }}</h1>
+                                        <p>{{ $postit->contenu }}</p>
+                                    </div>
+                                @endforeach
+                            @endfor
                         </div>
                     </div>
                     @endif

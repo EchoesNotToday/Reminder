@@ -9,10 +9,6 @@ use App\PostIt;
 class PostItController extends Controller
 {
     
-    public function index(){
-        $postit = PostIt::get();
-        return view('postits', ['postits' =>  $postit]);
-    }
     
     
     /*public function insertPostIt(){
