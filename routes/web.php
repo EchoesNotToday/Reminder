@@ -15,9 +15,14 @@
 Auth::routes();
 
 Route::get('/', 'LinkController@index');
-Route::get('/postit', 'LinkController@postit');
+Route::get('/postit', 'LinkController@displayPostIt');
 
 Route::get('/home', [
     'middleware' => 'auth',
     'uses' => 'LinkController@home'
+])->name('home');
+
+Route::post('/home', [
+    'middleware' => 'auth',
+    'uses' => 'LinkController@addPostIt'
 ])->name('home');

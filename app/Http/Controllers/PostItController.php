@@ -8,9 +8,6 @@ use App\PostIt;
 
 class PostItController extends Controller
 {
-    
-    
-    
     /*public function insertPostIt(){
         DB::table('post_it')->insert([
             ''
