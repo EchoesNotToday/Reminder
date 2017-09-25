@@ -13,6 +13,9 @@
                         </div>
 
                         <div class="panel-body">
+                        @if (isset($message))
+                            <div class="message ">{{ $message }}</div>
+                            @endif
                             @for ($i = 0; $i < count($datas); $i++)
                                 @foreach ($datas[$i] as $postit)
                                     <div>

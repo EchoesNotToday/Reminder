@@ -31,6 +31,12 @@ class PostItController extends Controller
     }
     public function deletePostIt($postit_id){
         $delete = PostIt::where('id', '=', "$postit_id")->delete();
-        return redirect('postit');
+        $note = "Post-it Supprimé.";
+        $id = Auth::user()->id;
+        $postit = PostIt::where("user_id", "=", "$id")->get();
+        return view('postit', [
+            'message' => $note,
+            'datas'=> [$postit]
+            ]);
     }
 }
