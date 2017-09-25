@@ -10,6 +10,6 @@ class DeleteUserController extends Controller
 	public function deleteCurrentUser(){
 		$user_id = Auth::user()->id;
 		$delete = User::where("id",'=',"$user_id")->delete();
-		return view('/');
+		return redirect('/');
 	}
 }
