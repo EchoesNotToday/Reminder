@@ -25,7 +25,7 @@ class PostItController extends Controller
             'couleur' => $_POST['couleur']
         ));
         $message = "Vous avez bien ajouté le postit";
-        return view('home');
+        return view('home', ['message' => $message]);
     }
     public function deletePostIt($postit_id){
         $delete = PostIt::where('id', '=', "$postit_id")->delete();
