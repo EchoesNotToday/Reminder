@@ -16,8 +16,10 @@
                             @for ($i = 0; $i < count($datas); $i++)
                                 @foreach ($datas[$i] as $postit)
                                     <div>
+                                        <a href='{{ url("/delete/$postit->id")}}'>supprimer</a>
                                         <h1>{{ $postit->titre }}</h1>
                                         <p>{{ $postit->contenu }}</p>
+                                        <p>{{ $postit->id}}</p>
                                     </div>
                                 @endforeach
                             @endfor
