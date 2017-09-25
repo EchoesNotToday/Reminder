@@ -26,3 +26,8 @@ Route::post('/home', [
     'middleware' => 'auth',
     'uses' => 'PostItController@addPostIt'
 ])->name('home');
+
+Route::get('/currentUserDelete', [
+	'middleware' => 'auth',
+	'uses' => 'DeleteUserController@deleteCurrentUser'
+	]);
