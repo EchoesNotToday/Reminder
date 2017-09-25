@@ -22,7 +22,9 @@ class PostItController extends Controller
             'user_id' => $id,
             'titre' => $_POST['title'],
             'contenu' => $_POST['contenu'],
-            'couleur' => $_POST['couleur']
+            'couleur' => $_POST['couleur'],
+            'created_at' => date('Y-m-d H:i:s', time()),
+            'updated_at' => date('Y-m-d H:i:s', time())
         ));
         $message = "Vous avez bien ajouté le postit";
         return view('home', ['message' => $message]);
