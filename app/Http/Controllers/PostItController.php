@@ -39,4 +39,9 @@ class PostItController extends Controller
             'datas'=> [$postit]
             ]);
     }
+public function deleteAllPostIt(){
+	$id = Auth::user()->id;
+	$postit = PostIt::where("user_id", "=" , "$id")->delete();
+	return redirect('postit');
+   }
 }

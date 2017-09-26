@@ -31,6 +31,10 @@ Route::get('/delete/{id}', [
 	'middleware' => 'auth',
 	'uses' => 'PostItController@deletePostIt'
 ]);
+Route::get('/deleteall', [
+	'middleware' => 'auth',
+	'uses' => 'PostItController@deleteAllPostIt'
+	]);
 Route::get('/currentUserDelete', [
 	'middleware' => 'auth',
 	'uses' => 'DeleteUserController@deleteCurrentUser'
