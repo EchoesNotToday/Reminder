@@ -6,11 +6,11 @@
                 <div class="panel-heading">Ajouter un post It</div>
 
                 <div class="panel-body">
-                  	@if (isset($message))
+                  	@isset($message)
                   			<div class="message">
                   				{{ $message }}
                   			</div>
-                  	@endif
+                  	@endisset
                     <form class="form-horizontal" method="POST" action="{{ route('home') }}">
                         {{ csrf_field() }}
 
