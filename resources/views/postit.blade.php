@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Afficher les post It</div>
+                <div class="panel-heading">Afficher les post It <a href='{{ url("/deleteall")}}'>Supprimer tous les post-it </a></div>
 
                 <div class="panel-body">
                     @if (count($datas) > 0)
@@ -15,7 +15,7 @@
                         <div class="panel-body">
                         @if (isset($message))
                             <div class="message ">{{ $message }}</div>
-                            @endif
+                        @endif
                             @for ($i = 0; $i < count($datas); $i++)
                                 @foreach ($datas[$i] as $postit)
                                     <div>
