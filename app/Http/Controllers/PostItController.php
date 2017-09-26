@@ -13,8 +13,8 @@ class PostItController extends Controller
         $id = Auth::user()->id;
         $postit = PostIt::where("user_id", "=", "$id")->get();
         return view('postit', [
-            'datas' => [$postit]
-        ]);
+            'datas' => $postit
+            ]);
     }
     public function addPostIt(){
         $id = Auth::user()->id;
@@ -27,21 +27,20 @@ class PostItController extends Controller
             'updated_at' => date('Y-m-d H:i:s', time())
         ));
         $message = "Vous avez bien ajouté le postit";
-        return view('home', ['message' => $message]);
+        return view('home', [
+            'message' => $message
+        ]);
     }
     public function deletePostIt($postit_id){
         $delete = PostIt::where('id', '=', "$postit_id")->delete();
         $note = "Post-it Supprimé.";
         $id = Auth::user()->id;
         $postit = PostIt::where("user_id", "=", "$id")->get();
-        return view('postit', [
-            'message' => $note,
-            'datas'=> [$postit]
-            ]);
+        return redirect('postit');
     }
-public function deleteAllPostIt(){
-	$id = Auth::user()->id;
-	$postit = PostIt::where("user_id", "=" , "$id")->delete();
-	return redirect('postit');
+    public function deleteAllPostIt(){
+        $id = Auth::user()->id;
+        $postit = PostIt::where("user_id", "=" , "$id")->delete();
+        return redirect('postit');
    }
 }
