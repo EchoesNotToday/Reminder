@@ -15,7 +15,6 @@
 Auth::routes();
 
 Route::get('/', 'LinkController@index');
-Route::get('/postit', 'PostItController@displayPostIt');
 
 Route::get('/home', [
     'middleware' => 'auth',
@@ -39,3 +38,14 @@ Route::get('/currentUserDelete', [
 	'middleware' => 'auth',
 	'uses' => 'DeleteUserController@deleteCurrentUser'
 	]);
+
+
+Route::post('/postit', [
+	'middleware' => 'auth',
+	'uses' => 'PostItController@search'
+	])->name('postit');
+
+Route::get('/postit', [
+	'middleware' => 'auth',
+	'uses' => 'PostItController@displayPostIt'
+	])->name('postit');

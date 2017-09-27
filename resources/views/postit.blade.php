@@ -2,6 +2,12 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
+        <form method="post" action="{{ route('postit')}}">
+        
+                        {{ csrf_field() }}
+            <input type="text" name="search" placeholder="rechercher">
+            <button type="submit">ok</button>
+        </form>
             <div class="panel panel-default">
                 <div class="panel-heading">Afficher les post It <a href='{{ url("/deleteall")}}'>Supprimer tous les post-it </a></div>
 

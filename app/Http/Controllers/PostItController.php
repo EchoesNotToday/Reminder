@@ -43,4 +43,14 @@ class PostItController extends Controller
         $postit = PostIt::where("user_id", "=" , "$id")->delete();
         return redirect('postit');
    }
+    public function search(){
+        $id = Auth::user()->id;
+        $word = $_POST['search'];
+        $search = PostIt::where([
+            ["user_id", "=", "$id"],
+            ["titre", "=", "$word"]
+            
+            ])->get();
+        return view('postit',['datas' => $search]);
+   }
 }
