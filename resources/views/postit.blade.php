@@ -1,43 +1,26 @@
 @extends('layouts.app') @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-        <form method="post" action="{{ route('postit')}}">
-        
-                        {{ csrf_field() }}
-            <input type="text" name="search" placeholder="rechercher">
-            <button type="submit">ok</button>
-        </form>
-            <div class="panel panel-default">
-                <div class="panel-heading">Afficher les post It <a href='{{ url("/deleteall")}}'>Supprimer tous les post-it </a></div>
-
-                @if (count($datas) > 0)
-                <div class="panel-body">                 
-                   <div class="panel panel-default">
-                    <div class="panel-heading">
-                        Current postits
-                    </div>
-
-                    <div class="panel-body">
-                        @if (isset($message))
-                        <div class="message ">{{ $message }}</div>
-                        @endif 
-                       @foreach ($datas as $postit) 
-                            <div>
-                            <a href='{{ url("/delete/$postit->id")}}'>supprimer</a>
-                            <h1>{{ $postit->titre }}</h1>
-                            <p>{{ $postit->contenu }}</p>
-                            <p>{{ $postit->id}}</p>
-                            </div>
-                        @endforeach 
-                    </div>
-                </div>
-            </div>
-            @else 
-            ok 
-            @endif
-        </div>
+<div class="blockTriangles">
+        <img class="triangle1" src="assets/img/triangles.svg" alt="#">
+        <img class="triangle2" src="assets/img/triangles.svg" alt="#">
     </div>
-</div>
-</div>
+    <section class="contenuAccueil">
+@if (count($datas) == 0)
+
+    <p>Désolé, vous n'avez pas de post-it. Cordialement Gérard de la maintenance.</p>
+@else
+@foreach ($datas as $postit)
+
+
+        <div class="postit">
+            <h4 class="titrePostit">{{ $postit->titre}}</h4>
+            <div class="blocDate">
+                <p class="datePostit">{{ $postit->created_at}}</p>
+                <div id="triangle-left"></div>
+            </div>
+            <p class="contenuPostit">{{ $postit->contenu}}</p>
+        </div>
+
+    @endforeach
+    @endif
+    </section>
 @endsection
