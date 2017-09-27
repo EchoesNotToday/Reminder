@@ -8,7 +8,6 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Reminder') }}</title>
     <title>Reminder</title>
 
     <!-- Styles -->
@@ -70,10 +69,10 @@
                 @else
                 <nav class="navbar">
                     <a class="navbar-brand" href="{{ url('/') }}"><img src="{{asset('img/logotype.svg')}}"></a>
-
-                    <form class="navbar-form navbar-left">
+                    <form class="navbar-form navbar-left" method="post" action="{{ route('postit')}}" >
+                        {{ csrf_field() }}
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Rechercher">
+                            <input type="text" name="search" class="form-control" placeholder="Rechercher">
                         </div>
                         <button type="submit" class="btn btn-default"><img class="searchIcon" src="{{ asset('img/magnifying-glass.svg')}}" alt="#"></button>
                     </form>
