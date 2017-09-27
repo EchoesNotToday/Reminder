@@ -1,0 +1,519 @@
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: local("Lato Regular"), local("Lato-Regular"), url(https://fonts.gstatic.com/s/lato/v13/1YwB1sO8YE1Lyjf12WNiUA.woff2) format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    src: local("Lato Bold"), local("Lato-Bold"), url(https://fonts.gstatic.com/s/lato/v13/H2DMvhDLycM56KNuAtbJYA.woff2) format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+
+/* CONTAINER */
+
+body {
+    background: #F55C54;
+    width: 100%;
+    font-family: 'Lato';
+    color: #F5F5F5;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+
+/* HEADER */
+
+.navbar {
+    height: 3em;
+    background: #333333;
+    text-transform: uppercase;
+    padding: 0px;
+    margin: 0 auto;
+    border: none;
+    border-radius: 0;
+}
+
+.navbar .search {
+    width: 100%;
+    margin: auto;
+}
+
+.navbar .searchIcon {
+    width: 1em;
+}
+
+.navbar .navbar-brand img {
+    width: 8em;
+}
+
+.navbar .nav {
+    position: relative;
+}
+
+.navbar .search {
+    margin: auto;
+}
+
+.navbar .avatar {
+    width: 2em;
+    height: 2em;
+    border: 1px solid #F5F5F5;
+    border-radius: 5px;
+    margin: auto;
+}
+
+.navbar ul {
+    display: flex;
+    position: relative;
+    height: 100%;
+}
+
+.navbar .account {
+    display: flex;
+}
+
+.navbar .account p {
+    margin-left: 1em;
+}
+
+.navbar li {
+    width: auto;
+    height: 100%;
+}
+
+.navbar li a {
+    width: 11em;
+    height: 100%;
+    text-decoration: none;
+    color: #F5F5F5;
+    display: flex;
+}
+
+.navbar li a .icon {
+    margin: auto;
+    margin-left: 1em;
+}
+
+.navbar li a .add {
+    margin-right: 1em;
+}
+
+.navbar li a p {
+    margin: auto;
+}
+
+.navbar li a .disconnect {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.navbar li img {
+    margin-top: 0px;
+    width: 1.5em;
+}
+
+.navbar li a:hover {
+    color: #333333;
+    background-color: #F55C54;
+}
+
+
+/* FOOTER */
+
+footer {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    height: auto;
+    width: 100%;
+    background: #333333;
+    margin: auto;
+    text-align: center;
+}
+
+footer ul {
+    display: flex;
+    padding: 0px;
+    width: 7em;
+    margin: auto;
+    text-align: center;
+}
+
+footer ul li {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    margin: auto;
+    margin-top: 0.8em;
+    margin-bottom: 0.8em;
+}
+
+footer ul li p {
+    color: #F5F5F5;
+    font-size: 1em;
+    text-transform: none;
+    margin: auto;
+    margin-left: 0.2em;
+}
+
+footer img {
+    width: 1.2em;
+}
+
+footer .mentions {
+    color: #F55C54;
+    font-size: 0.6em;
+    text-transform: uppercase;
+    padding: 0px;
+    margin-bottom: 0.8em;
+}
+
+footer a {
+    width: 100%;
+    display: flex;
+}
+
+footer a:link {
+    text-decoration: none;
+}
+
+
+/* LOGO */
+
+.logo {
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    transform: translate(-50%);
+    width: 20rem;
+}
+
+
+/* SECTION CONTENU */
+
+#contenuAccueil {
+    position: absolute;
+    display: flex;
+    width: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#contenuAccueil .texte {
+    width: 20em;
+    text-align: justify;
+    font-size: 1em;
+    position: relative;
+    right: 0%;
+}
+
+#contenuAccueil .image {
+    width: 50%;
+    position: relative;
+    left: 10%;
+}
+
+#contenuAccueil .image .postits {
+    width: 100%;
+    right: 0px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+/* TRIANGLES */
+
+.blockTriangles {
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+    padding-top: 3em;
+    display: block;
+}
+
+.triangle1 {
+    position: relative;
+    left: -15%;
+    top: 50%;
+    max-width: 47%;
+    height: 75%;
+}
+
+.triangle2 {
+    position: relative;
+    right: -20%;
+    top: 50%;
+    max-width: 47%;
+    height: 75%;
+}
+
+
+/* FORMULAIRE CONNEXION */
+
+.formulaire {
+    background-color: #333333;
+    text-align: center;
+    width: 50%;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3);
+    height: 100%;
+}
+
+.formulaire p {
+    text-transform: uppercase;
+    margin: 1.5em auto;
+}
+
+.formulaire input {
+    border: 1px solid #F55C54;
+    border-radius: 0px;
+    margin-top: 0px;
+}
+
+.formulaire .btn {
+    border: 1px solid #F55C54;
+    border-radius: 0px;
+    color: #F5F5F5;
+    background: #333333;
+    margin-top: 0.8em;
+}
+
+.formulaire .oubli {
+    color: #F55C54;
+    margin-top: -10px;
+    font-size: 0.6em;
+    position: absolute;
+    right: 54%;
+}
+
+.formulaire .col-sm-12 {
+    width: 80%;
+    padding: 0px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.formulaire .col-sm-offset-2 {
+    margin: auto;
+    padding-top: 0px;
+}
+
+
+/* TRIANGLES FORMULAIRES */
+
+.formulaire::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-left: 20px solid #F55C54;
+    border-bottom: 10px solid transparent;
+    position: absolute;
+    left: 0px;
+    top: 1em;
+}
+
+.formulaire::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-right: 20px solid #F55C54;
+    border-bottom: 10px solid transparent;
+    position: absolute;
+    right: 50%;
+    top: 1em;
+}
+
+.form-horizontal::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-left: 20px solid #F5F5F5;
+    border-bottom: 10px solid transparent;
+    position: absolute;
+    left: 0px;
+    top: 2em;
+}
+
+.form-horizontal::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-right: 20px solid #F5F5F5;
+    border-bottom: 10px solid transparent;
+    position: absolute;
+    right: 50%;
+    top: 2em;
+}
+
+
+/* MODALE CREATION POST-IT */
+
+h4 {
+    text-transform: uppercase;
+}
+
+.add {
+    width: 1em;
+    margin: auto;
+}
+
+.modal-content {
+    background-color: #333333;
+    border: 1px solid #F55C54;
+    border-radius: 0px;
+    width: 50%;
+    margin: auto;
+    margin-top: 50%;
+    transform: translateY(-50%);
+}
+
+.btn-info {
+    display: flex;
+    height: 100%;
+    margin: auto;
+    border-radius: 0px;
+    background-color: #333333;
+    border: none;
+}
+
+.btn-info p {
+    margin: auto;
+}
+
+.btn-info img {
+    margin: auto 1em;
+}
+
+.btn-info:hover {
+    color: #F55C54;
+    background-color: #333333;
+}
+
+.btn-info:focus {
+    background-color: #333333;
+}
+
+.contenu {
+    margin-top: 1em;
+    border: solid 1px #F55C54;
+    border-radius: 0px;
+}
+
+.titre {
+    border: solid 1px #F55C54;
+    border-radius: 0px;
+}
+
+.vert {
+    background-color: green;
+    margin-top: 1em;
+    border-radius: 0px;
+    border: none;
+}
+
+.vert:hover {
+    background-color: #005C00;
+}
+
+.vert:focus {
+    background-color: #333333;
+    color: #F55C54;
+}
+
+.orange {
+    background-color: orange;
+    margin-top: 1em;
+    border-radius: 0px;
+    border: none;
+}
+
+.orange:hover {
+    background-color: #CE8200;
+}
+
+.orange:focus {
+    background-color: #333333;
+    color: #F55C54;
+}
+
+.rouge {
+    background-color: red;
+    margin-top: 1em;
+    border-radius: 0px;
+    border: none;
+    width: 72px;
+}
+
+.rouge:hover {
+    background-color: #B80000;
+}
+
+.rouge:focus {
+    background-color: #333333;
+    color: #F55C54;
+}
+
+.btn-default {
+    border: 1px solid #F55C54;
+    border-radius: 0px;
+    background-color: #333333;
+    color: #F5F5F5;
+}
+
+
+/* POST-IT */
+
+.contenuAccueil {
+    position: absolute;
+    display: flex;
+    width: 90%;
+    height: 70%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.postit {
+    position: absolute;
+    top: 0%;
+    width: 15%;
+    height: auto;
+    padding: 1em;
+    background-color: #F5F5F5;
+    color: #333333;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+}
+
+.postit .blocDate {
+    position: relative;
+    width: 100%;
+}
+
+.postit .blocDate #triangle-left {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-right: 20px solid green;
+    border-bottom: 10px solid transparent;
+    right: -10%;
+    top: 0%;
+}
+
+.postit .blocDate .datePostit {
+    font-size: 0.8em;
+    width: 100%;
+}

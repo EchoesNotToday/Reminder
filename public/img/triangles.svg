@@ -1,0 +1,33 @@
+<svg width="950" height="807" viewBox="0 0 950 807" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>triangles</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-5242 43)">
+<clipPath id="clip-0" clip-rule="evenodd">
+<path d="M 5242 -43L 6192 -43L 6192 764L 5242 764L 5242 -43Z" fill="#FFFFFF"/>
+</clipPath>
+<g id="triangles" clip-path="url(#clip-0)">
+<g id="Polygon">
+<mask id="mask0_outline_ins">
+<use xlink:href="#path0_fill" fill="white" transform="translate(5183 -43)"/>
+</mask>
+<g mask="url(#mask0_outline_ins)">
+<use xlink:href="#path1_stroke_2x" transform="translate(5183 -43)" fill="#F5F5F5"/>
+</g>
+</g>
+<g id="Polygon">
+<mask id="mask1_outline_ins">
+<use xlink:href="#path2_fill" fill="white" transform="translate(5370 194)"/>
+</mask>
+<g mask="url(#mask1_outline_ins)">
+<use xlink:href="#path3_stroke_2x" transform="translate(5370 194)" fill="#333333"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 531.5 0L 991.793 797.25L 71.2075 797.25L 531.5 0Z"/>
+<path id="path1_stroke_2x" d="M 531.5 0L 540.16 -5L 531.5 -20L 522.84 -5L 531.5 0ZM 991.793 797.25L 991.793 807.25L 1009.11 807.25L 1000.45 792.25L 991.793 797.25ZM 71.2075 797.25L 62.5472 792.25L 53.887 807.25L 71.2075 807.25L 71.2075 797.25ZM 522.84 5L 983.132 802.25L 1000.45 792.25L 540.16 -5L 522.84 5ZM 991.793 787.25L 71.2075 787.25L 71.2075 807.25L 991.793 807.25L 991.793 787.25ZM 79.8678 802.25L 540.16 5L 522.84 -5L 62.5472 792.25L 79.8678 802.25Z"/>
+<path id="path2_fill" d="M 344.5 0L 642.846 516.75L 46.1542 516.75L 344.5 0Z"/>
+<path id="path3_stroke_2x" d="M 344.5 0L 353.16 -5L 344.5 -20L 335.84 -5L 344.5 0ZM 642.846 516.75L 642.846 526.75L 660.166 526.75L 651.506 511.75L 642.846 516.75ZM 46.1542 516.75L 37.494 511.75L 28.8337 526.75L 46.1542 526.75L 46.1542 516.75ZM 335.84 5L 634.185 521.75L 651.506 511.75L 353.16 -5L 335.84 5ZM 642.846 506.75L 46.1542 506.75L 46.1542 526.75L 642.846 526.75L 642.846 506.75ZM 54.8145 521.75L 353.16 5L 335.84 -5L 37.494 511.75L 54.8145 521.75Z"/>
+</defs>
+</svg>

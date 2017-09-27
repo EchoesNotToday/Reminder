@@ -7,89 +7,66 @@
 
         <title>Laravel</title>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
+        <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+        
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
-                </div>
-            @endif
+    <div class="container-fluid">
 
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
+        <header>
+                <nav class="navbar">
+                    <a class="navbar-brand" href="{{ url('/') }}"><img src="{{ asset('img/logotype.svg') }}"></a>
+                    <ul class="nav navbar-right">
+                        <li class="connect">
+                            <a href="{{ route('login') }}">
+                                <p>Connexion</p><img class="icon" src="{{ asset ('img/login-square-arrow-button-outline.svg')}}" alt="#"></a>
+                        </li>
+                        <li class="signin">
+                            <a href="{{ route('register') }}">
+                                <p>Inscription</p><img class="icon" src="{{ asset ('img/new-file.svg')}}" alt="#"></a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="blockTriangles">
+            <img class="triangle1" src="{{ asset ('img/triangles.svg')}}" alt="#">
+            <img class="triangle2" src="{{ asset ('img/triangles.svg')}}" alt="#">
         </div>
+        <img class="logo" src="{{ asset ('img/logoshadow.svg')}}" alt="#">
+        <section id="contenuAccueil">
+
+            <div class="texte">
+                <h2>Reminder ?</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut posuere, magna et sodales rutrum, libero urna faucibus metus, ut varius sapien augue id nisi. Nullam dolor nunc, condimentum sed lacus sit amet, mattis viverra orci. Quisque non
+                    aliquet neque. Vivamus imperdiet lectus metus, ut semper sem tincidunt nec. In et lectus pulvinar, feugiat quam sit amet, fringilla sem.</p>
+            </div>
+            <div class="image img-fluid">
+                <img class="postits" src="{{ asset ('img/postit.svg')}}" alt="#">
+            </div>
+
+
+        </section>
+
+        <footer class="footer container-fluid">
+            <ul>
+                <li>
+                    <a href="#"><img class="socialIcon" src="{{ asset ('img/facebook-logo.svg')}}" alt="#">
+                    </a>
+                </li>
+                <li>
+                    <a href="#"><img class="socialIcon" src="{{ asset ('img/twitter-logo.svg')}}" alt="#">
+                    </a>
+                </li>
+                <li>
+                    <a href="#"><img class="socialIcon" src="{{ asset ('img/linkedin-sign.svg')}}" alt="#">
+                    </a>
+                </li>
+            </ul>
+
+            <p class="mentions">Mentions légales</p>
+
+        </footer>
+       </div>
     </body>
 </html>
