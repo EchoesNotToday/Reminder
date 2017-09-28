@@ -27,9 +27,6 @@ class PostItController extends Controller
             'updated_at' => date('Y-m-d H:i:s', time())
         ));
         $message = "Vous avez bien ajouté le postit";
-        return view('home', [
-            'message' => $message
-        ]);
         return redirect('postit');
     }
     public function deletePostIt($postit_id){
