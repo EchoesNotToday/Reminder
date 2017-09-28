@@ -6,7 +6,7 @@
     <section class="contenuAccueil">
 @if (count($datas) == 0)
 
-    <p>Désolé, vous n'avez pas de post-it. Cordialement Gérard de la maintenance.</p>
+    <p>Désolé, vous n'avez pas de post-it. <br>Cordialement, Gérard de la maintenance.</p>
 @else
 @foreach ($datas as $postit)
 
