@@ -68,7 +68,7 @@
                 </nav>
                 @else
                 <nav class="navbar">
-                    <a class="navbar-brand" href="{{ url('/') }}"><img src="{{asset('img/logotype.svg')}}"></a>
+                    <a class="navbar-brand" href="{{ url('/postit') }}"><img src="{{asset('img/logotype.svg')}}"></a>
                     <form class="navbar-form navbar-left" method="post" action="{{ route('postit')}}" >
                         {{ csrf_field() }}
                         <div class="form-group">
