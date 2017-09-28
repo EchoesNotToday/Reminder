@@ -37,7 +37,7 @@ Route::get('/deleteall', [
 Route::get('/currentUserDelete', [
 	'middleware' => 'auth',
 	'uses' => 'DeleteUserController@deleteCurrentUser'
-	]);
+	])->name('currentUserDelete');
 
 
 Route::post('/postit', [

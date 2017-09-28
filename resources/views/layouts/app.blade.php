@@ -102,7 +102,7 @@
 
                             </li>
                             <li>
-                                <a href="{{ url('/currentUserDelete')}}">Delete User</a>
+                                <a href="{{ route('currentUserDelete')}}">Delete User</a>
                             </li>
                         </ul>
                     </nav>
