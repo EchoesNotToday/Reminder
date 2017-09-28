@@ -136,6 +136,14 @@ body {
     margin-right: 0px;
 }
 
+.supprimer {
+    margin-top: 3%;
+}
+
+.del:hover {
+    background: #F55C54;
+}
+
 
 /* FOOTER */
 
