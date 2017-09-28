@@ -136,6 +136,14 @@ body {
     margin-right: 0px;
 }
 
+.supprimer {
+    margin-top: 3%;
+}
+
+.del:hover {
+    background: #F55C54;
+}
+
 
 /* FOOTER */
 
@@ -543,10 +551,21 @@ h4 {
     width: 0;
     height: 0;
     border-top: 10px solid transparent;
-    border-right: 20px solid green;
     border-bottom: 10px solid transparent;
     right: -10%;
     top: 0%;
+}
+
+.greenPost {
+    border-right: 20px solid green;
+}
+
+.orangePost {
+    border-right: 20px solid orange;
+}
+
+.redPost {
+    border-right: 20px solid red;
 }
 
 .postit .blocDate .datePostit {

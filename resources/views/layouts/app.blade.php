@@ -109,8 +109,8 @@
                                 {{ csrf_field() }}>
 
                             </li>
-                            <li style="text-align: right;">
-                                <a style="color: grey; margin-top:3%;" href="{{ url('/currentUserDelete')}}">Supprimer Compte</a>
+                            <li class="del" style="text-align: right;">
+                                <a class ="supprimer" style="color: grey;" href="{{ url('/currentUserDelete')}}">Supprimer Compte</a>
                             </li>
                         </ul>
                     </nav>
