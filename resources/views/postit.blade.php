@@ -12,7 +12,12 @@
 
 
         <div class="postit">
-            <h4 class="titrePostit">{{ $postit->titre}}</h4>
+            <div class="blocTitre">
+                <h4 class="titrePostit">{{ $postit->titre}}</h4>
+                <a href="">
+                    <img class="trash" src="{{ asset ('img/rubbish-bin-delete-button.svg')}}" alt="#">
+                </a>
+            </div>
             <div class="blocDate">
                 <p class="datePostit">{{ $postit->created_at}}</p>
                 <div id="triangle-left"></div>
