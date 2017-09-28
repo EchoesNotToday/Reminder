@@ -33,11 +33,19 @@
                         <input type="text" class="form-control titre" id="text" name="title" placeholder="Titre">
                         <textarea class="contenu form-control" name="contenu" placeholder="Contenu" rows="5" id="comment"></textarea>
 
-                        <div class="btn-group">
-                            <button type="button" class="vert btn btn-primary">Peu important</button>
-                            <button type="button" class="orange btn btn-primary">Important</button>
-                            <button type="button" class="rouge btn btn-primary">Urgent</button>
-                        </div>
+                        <!-- <div class="btn-group">
+                            <button type="radio" class="vert btn btn-primary">Peu important</button>
+                            <button type="radio" class="orange btn btn-primary">Important</button>
+                            <button type="radio" class="rouge btn btn-primary">Urgent</button>
+                        </div> -->
+<div class="btn-group">
+<label class="radio-inline">
+<input type="radio" name="optradio" value="vert">Option 1</label>
+<label class="radio-inline">
+<input type="radio" name="optradio" value="orange">Option 2</label>
+<label class="radio-inline">
+<input type="radio" name="optradio" value="rouge">Option 3</label>
+</div>
 
                     </div>
                     <div class="modal-footer">

@@ -20,7 +20,7 @@
             </div>
             <div class="blocDate">
                 <p class="datePostit">{{ $postit->created_at}}</p>
-                <div id="triangle-left"></div>
+                <div id="triangle-left" class="{{ $postit->couleur}}"></div>
             </div>
             <p class="contenuPostit">{{ $postit->contenu}}</p>
         </div>

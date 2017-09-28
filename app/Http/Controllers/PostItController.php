@@ -17,12 +17,23 @@ class PostItController extends Controller
             ]);
     }
     public function addPostIt(){
+        switch ($_Post['couleur']) {
+            case 'vert':
+                $couleur = "greenPost";
+                break;
+            case 'orange':
+                $couleur = "orangePost";
+                break;
+            case 'rouge':
+                $couleur = "redPost";
+                break;
+        }
         $id = Auth::user()->id;
         $postit = PostIt::where("user_id", "=", "$id")->insert(array(
             'user_id' => $id,
             'titre' => $_POST['title'],
             'contenu' => $_POST['contenu'],
-            'couleur' => $_POST['couleur'],
+            'couleur' => $couleur,
             'created_at' => date('Y-m-d H:i:s', time()),
             'updated_at' => date('Y-m-d H:i:s', time())
         ));
