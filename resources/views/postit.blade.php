@@ -14,8 +14,8 @@
         <div class="postit">
             <div class="blocTitre">
                 <h4 class="titrePostit">{{ $postit->titre}}</h4>
-                <a href="">
-                    <img class="trash" src="{{ asset ('img/rubbish-bin-delete-button.svg')}}" alt="#">
+                <a href='{{ url("/delete/$postit->id")}}'>
+                    <img class="trash" src="{{ asset ('img/rubbish-bin-delete-button.svg')}}" alt="#" >
                 </a>
             </div>
             <div class="blocDate">
