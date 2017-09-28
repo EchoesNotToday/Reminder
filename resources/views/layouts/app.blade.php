@@ -91,8 +91,8 @@
                                 <p>{{ Auth::user()->name }}</p>
                             </a>
                         </li>
-                        <li>
-                            <a href="{{ route('logout') }}"
+                        <li class="deco">
+                            <a href="{{ route('logout') }}" style="width: auto;"
                             onclick="event.preventDefault();
                             document.getElementById('logout-form').submit();"><img class="disconnect" src="{{asset('img/logout.svg')}}" alt="#"></a>
 
@@ -101,8 +101,8 @@
                                 {{ csrf_field() }}>
 
                             </li>
-                            <li>
-                                <a href="{{ route('currentUserDelete')}}">Delete User</a>
+                            <li style="text-align: right;">
+                                <a style="color: grey;" href="{{ url('/currentUserDelete')}}">Supprimer Compte</a>
                             </li>
                         </ul>
                     </nav>

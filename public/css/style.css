@@ -90,11 +90,14 @@ body {
 }
 
 .navbar li a {
-    width: 11em;
     height: 100%;
     text-decoration: none;
     color: #F5F5F5;
     display: flex;
+}
+
+.delete {
+    color: grey;
 }
 
 .navbar li a .icon {
@@ -123,6 +126,14 @@ body {
 .navbar li a:hover {
     color: #333333;
     background-color: #F55C54;
+}
+
+.deco {
+    width: 10%;
+}
+
+.navbar-right {
+    margin-right: 0px;
 }
 
 
