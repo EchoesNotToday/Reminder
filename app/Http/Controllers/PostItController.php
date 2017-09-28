@@ -30,6 +30,7 @@ class PostItController extends Controller
         return view('home', [
             'message' => $message
         ]);
+        return redirect('postit');
     }
     public function deletePostIt($postit_id){
         $delete = PostIt::where('id', '=', "$postit_id")->delete();
