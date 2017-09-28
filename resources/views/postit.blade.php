@@ -1,7 +1,7 @@
 @extends('layouts.app') @section('content')
 <div class="blockTriangles">
-        <img class="triangle1" src="assets/img/triangles.svg" alt="#">
-        <img class="triangle2" src="assets/img/triangles.svg" alt="#">
+        <img class="triangle1" src="{{asset('img/triangles.svg')}}" alt="#">
+        <img class="triangle2" src="{{asset('img/triangles.svg')}}" alt="#">
     </div>
     <section class="contenuAccueil">
 @if (count($datas) == 0)
