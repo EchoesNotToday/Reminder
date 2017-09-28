@@ -17,7 +17,7 @@ class PostItController extends Controller
             ]);
     }
     public function addPostIt(){
-        switch ($_Post['couleur']) {
+        switch ($_POST['optradio']) {
             case 'vert':
                 $couleur = "greenPost";
                 break;
