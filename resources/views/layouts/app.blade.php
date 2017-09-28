@@ -87,7 +87,7 @@
                         </li>
                         <li class="account">
                             <a href="#" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
-                                <img class="avatar" src="{{asset('img/chirac.jpg')}}" alt="#">
+                                <img class="avatar" src="{{asset('img/man-user.svg')}}" alt="#">
                                 <p>{{ Auth::user()->name }}</p>
                             </a>
                         </li>
