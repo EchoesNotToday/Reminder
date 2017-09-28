@@ -102,7 +102,7 @@
 
                             </li>
                             <li style="text-align: right;">
-                                <a style="color: grey;" href="{{ url('/currentUserDelete')}}">Supprimer Compte</a>
+                                <a style="color: grey; margin-top:3%;" href="{{ url('/currentUserDelete')}}">Supprimer Compte</a>
                             </li>
                         </ul>
                     </nav>
